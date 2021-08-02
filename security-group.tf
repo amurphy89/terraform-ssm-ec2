@@ -27,7 +27,7 @@ resource "aws_security_group_rule" "public_allow_tcp_80" {
 }
 
 resource "aws_security_group_rule" "allow_all_outbound_private" {
-  type              = "ingress"
+  type              = "egress"
   from_port         = -1
   to_port           = -1
   protocol          = -1
@@ -36,7 +36,7 @@ resource "aws_security_group_rule" "allow_all_outbound_private" {
 }
 
 resource "aws_security_group_rule" "allow_all_outbound_public" {
-  type              = "ingress"
+  type              = "egress"
   from_port         = -1
   to_port           = -1
   protocol          = -1
